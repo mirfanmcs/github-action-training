@@ -1,0 +1,14 @@
+name: My Simple Workflow on Self Hosted Runner on VM
+on:
+  push:
+    branches: [ main ]
+    paths-ignore: [.github/**]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  Build:
+    runs-on: self-hosted
+    steps:
+      - run: |
+          echo "🎉 The job was triggered by event: ${{ github.event_name }} in self hosted runner"
