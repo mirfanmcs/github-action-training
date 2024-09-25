@@ -6,5 +6,11 @@ jobs:
        runs-on: ubuntu-latest
        steps:
           - run: echo "This is my first workflow"
+   my-second-job:
+       runs-on: ubuntu-latest
+       steps:
+          - run: |
+                  sleep 20;
+                  echo "This is my second workflow"
 
           
